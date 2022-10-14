@@ -6,10 +6,11 @@ import { Head } from 'next/document';
 
 
 const Spacer = styled.div`
-  margin-top: 11rem;
+  margin-top: 8rem;
 `;
 
 const Hero = styled.div`
+  margin-bottom: 15rem;
   width: 95%;
   @media screen and (min-width: 820px) {
     width: 65%;
@@ -61,7 +62,7 @@ const Hero = styled.div`
     
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
 
     span:nth-child(odd) {
       transform: rotate(2deg);
