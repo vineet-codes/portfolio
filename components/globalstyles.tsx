@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     background-color:#0a0a0a;
     padding: 0;
     margin: 0;
-    font-family: ${props => props.theme.fonts.text};
+    font-family: ${(props) => props.theme.fonts.text};
     /* overscroll-behavior: none; */
     overflow-x: hidden;
   }
@@ -29,4 +29,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default GlobalStyle
+export default GlobalStyle;

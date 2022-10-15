@@ -19,15 +19,15 @@ const LC = styled.div`
   }
 `;
 
-const GlobalLayout = ({children}) => {
+const GlobalLayout = ({ children }) => {
   return (
     <LayoutContainer>
       <LC>
-        <Nav/>
+        <Nav />
         {children}
       </LC>
     </LayoutContainer>
-  )
-}
+  );
+};
 
 export default GlobalLayout;
