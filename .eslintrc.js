@@ -28,17 +28,26 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"],
+      },
+    ],
     "consistent-return": "off",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "react/jsx-filename-extension": "off",
-    "react/function-component-definition": [
-      "error",
-      {
-        namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function",
-      },
-    ],
+    "react/function-component-definition": "off",
+    // "react/function-component-definition": [
+    //   "off",
+    //   {
+    //     namedComponents: "arrow-function",
+    //     unnamedComponents: "arrow-function",
+    //   },
+    // ],
     "prettier/prettier": "warn",
   },
 };
