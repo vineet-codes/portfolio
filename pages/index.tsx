@@ -155,10 +155,7 @@ const PostsContainer = styled.div`
 export default function Home({posts}) {
   const images = [...Array(5)].map((_, i) => `/assets/carousel/image-${i+1}.webp`)
   const dim = 240;
-  const avatarSize = 70;
-
-  console.log(posts);
-  
+  const avatarSize = 70;  
 
   return (
     <>
