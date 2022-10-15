@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Nav from "../Nav";
 
 const LayoutContainer = styled.div`
   width: 95%;
@@ -22,6 +23,7 @@ const GlobalLayout = ({children}) => {
   return (
     <LayoutContainer>
       <LC>
+        <Nav/>
         {children}
       </LC>
     </LayoutContainer>

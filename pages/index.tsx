@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import Image from 'next/image';
-import { FaTwitter,  FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaTwitter,  FaLinkedinIn, FaGithub, FaGreaterThan } from 'react-icons/fa';
 
 import { Head } from 'next/document';
+
+import { getAllPosts } from "../utils/mdx"
 
 
 const Spacer = styled.div`
@@ -10,10 +12,10 @@ const Spacer = styled.div`
 `;
 
 const Hero = styled.div`
-  margin-bottom: 15rem;
-  width: 95%;
+  margin-bottom: 2rem;
+  /* width: 95%; */
   @media screen and (min-width: 820px) {
-    width: 65%;
+    width: 55%;
   }
   /* border: 2px solid tomato; */
 
@@ -29,6 +31,10 @@ const Hero = styled.div`
     margin: 1.5rem 0 0 0;
 
     background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    
+
+    /* background-image: linear-gradient(60deg, #0c2453, #f5f23f); */
+
     background-clip: text;
     color: transparent;
 
@@ -84,10 +90,75 @@ const Hero = styled.div`
   }
 `;
 
-export default function Home() {
+const PostsContainer = styled.div`
+    /* width: 95%; */
+    /* border: 1px solid tomato; */
+    @media screen and (min-width: 820px) {
+      width: 60%;
+      padding: 1rem;
+    }
+
+    .post {
+      padding: 2em 0;
+      @media screen and (min-width: 820px) {
+        padding: 2em 1rem;
+      }
+      border-radius: 15px;
+      &:hover {
+        background-color:#2c2c31;
+      }
+      .date {
+        margin: 0;
+        padding-left: 1em;
+        font-size: 0.9rem;
+        border-left: 5px solid ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.primary};
+        opacity: 40%;
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+        
+      }
+      h2 {
+        margin-top: 0.2rem;
+        margin-bottom: 0.3rem;
+        color: rgb(244 244 245);
+        font-family: ${props => props.theme.fonts.headings};
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0;
+        font-family: ${props => props.theme.fonts.text};
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 119.9%;
+        letter-spacing: 0.05rem;
+        color: ${props => props.theme.colors.primary};
+        opacity: 40%;
+      }
+
+      .read-more {
+        margin-top: 0.6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: rgb(20 184 166);
+        p {
+          opacity: 100%;
+          color: rgb(20 184 166);
+        }
+      }
+    }
+`;
+
+export default function Home({posts}) {
   const images = [...Array(5)].map((_, i) => `/assets/carousel/image-${i+1}.webp`)
   const dim = 240;
   const avatarSize = 70;
+
+  console.log(posts);
+  
 
   return (
     <>
@@ -105,6 +176,47 @@ export default function Home() {
           {images.map((img, i) => <Image key={i} src={img} width={dim} height={dim} alt="hg" /> )}
         </div>
       </Hero>
+      <PostsContainer>
+          {posts.map(post => (
+            <div className="post" key={post.slug}>
+              <p className="date">{post.frontmatter.publishedAt}</p>
+              <h2>{post.frontmatter.title}</h2>
+              <p>{post.frontmatter.summary}</p>
+              <div className="read-more">
+                <p>Read More</p>
+                <FaGreaterThan/>
+              </div>
+            </div>
+          ))}
+        </PostsContainer>
     </>
   )
+}
+
+
+export async function getStaticProps() {
+  const rawPosts = getAllPosts();
+
+  const temp = rawPosts.map((post) => {
+    // post.publishedAt = new Date(post.publishedAt);
+    post.frontmatter.publishedAt = new Date(post.frontmatter.publishedAt);
+
+    return post;
+  });
+
+  const postsObject = temp.sort(
+    (a, b) => b.frontmatter.publishedAt - a.frontmatter.publishedAt
+  );
+
+  const allPosts = postsObject.map((post) => {
+    post.frontmatter.publishedAt = JSON.stringify(post.frontmatter.publishedAt);
+    return post;
+  });
+
+  // console.log(allPosts);
+
+  // show only non-draft posts in the catalog
+  const posts = allPosts.filter((post) => post.frontmatter.draft === false);
+
+  return { props: { posts }};
 }
