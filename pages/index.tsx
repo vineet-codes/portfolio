@@ -30,7 +30,7 @@ const Home = ({ posts, jobs }) => {
       <div className="home-grid">
         <Posts posts={posts} all = {false}/>
         <div>
-          {/* <Newsletter/> */}
+          <Newsletter/>
           <Jobs jobs={jobs}/>
         </div>
       </div>
