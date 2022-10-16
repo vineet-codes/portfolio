@@ -7,7 +7,7 @@ import { FaBriefcase } from "react-icons/fa";
 const Work = styled.div`
   border: 2px solid rgba(63,63,70,.4);
   border-radius: 1rem;
-  padding: 1.6rem;
+  padding: 1.6em;
 
   font-size: 10px;
 
