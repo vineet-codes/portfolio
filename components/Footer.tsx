@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const FotterC = styled.footer`
 
+  margin-top: 3rem;
   color: ${props => props.theme.colors.primary};
   opacity: 70%;
 

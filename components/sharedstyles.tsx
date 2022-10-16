@@ -52,7 +52,43 @@ const CodeTag = styled.code`
 `;
 
 const Spacer = styled.div`
-  /* margin-top: 6rem; */
+  margin-top: 6rem;
 `;
 
-export { Container, Main, Title, Description, CodeTag, Spacer };
+// mdx compoents
+
+const BlockQuote = styled.blockquote`
+  margin:0;
+  padding-top: 0.01em;
+  padding-bottom: 0.01em;
+  padding-left: 0.8em;
+
+  color: rgb(20 184 166);
+  font-style: italic;
+  border-left: 0.2em solid rgb(20 184 166);
+
+`;
+
+const H2 = styled.h2`  
+  // background: ${(props) => props.theme.colors.primary};
+  color: rgb(20 184 166);
+`;
+
+const H1 = styled.h1`  
+  // background: ${(props) => props.theme.colors.primary};
+  color: rgb(20 184 166);
+`;
+
+const components = {
+  blockquote: (props) => {
+    return <BlockQuote {...props} />
+  },
+  h1: (props) => {
+    return <H1 {...props}/>
+  },
+  h2: (props) => {
+    return <H2 {...props} />
+  }
+}
+
+export { Container, Main, Title, Description, CodeTag, Spacer, components };

@@ -42,7 +42,7 @@ export const getAllPosts = () => {
 export const getCompiledMDX = async (source) => {
   // Add your remark and rehype plugins here
   const remarkPlugins = [
-    [TOC, { maxDepth: 1 }],
+    [TOC, { maxDepth: 2 }],
     codeTitle,
     rSlug,
     [autolinkHeadings, { behavior: "wrap" }],
@@ -55,7 +55,7 @@ export const getCompiledMDX = async (source) => {
   const { code, frontmatter } = await bundleMDX({
     source,
     cwd: ComponentsInMdxPATH,
-    xdmOptions(options) {
+    mdxOptions(options, frontmatter) {
       options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
         ...remarkPlugins,

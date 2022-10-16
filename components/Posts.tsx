@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   FaGreaterThan,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const PostsContainer = styled.div`
 /* width: 95%; */
@@ -66,18 +67,21 @@ const PostsContainer = styled.div`
 `;
 
 
-const Posts = ({posts}) => {
+const Posts = ({posts, all}) => {
 
+  const blogposts = all ? posts : posts.slice(0,3);
   return (
     <PostsContainer>
-        {posts.slice(0,3).map((post) => (
+        {blogposts.map((post) => (
           <div className="post" key={post.slug}>
             <p className="date">{post.frontmatter.publishedAt.slice(1,-1)}</p>
             <h3>{post.frontmatter.title}</h3>
             <p>{post.frontmatter.summary}</p>
             <div className="read-more">
-              <p>Read More</p>
-              <FaGreaterThan strokeWidth={"2px"}/>
+              <Link href={`/blog/${post.slug}`}>
+                <a>Read More <FaGreaterThan strokeWidth={"2px"}/> </a>
+                
+              </Link>
             </div>
           </div>
         ))}

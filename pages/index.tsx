@@ -28,9 +28,9 @@ const Home = ({ posts, jobs }) => {
       <Spacer />
       <Hero/>
       <div className="home-grid">
-        <Posts posts={posts}/>
+        <Posts posts={posts} all = {false}/>
         <div>
-          <Newsletter/>
+          {/* <Newsletter/> */}
           <Jobs jobs={jobs}/>
         </div>
       </div>
