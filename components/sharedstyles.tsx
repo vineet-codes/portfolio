@@ -72,11 +72,13 @@ const BlockQuote = styled.blockquote`
 const H2 = styled.h2`  
   // background: ${(props) => props.theme.colors.primary};
   color: rgb(20 184 166);
+  font-family: ${props => props.theme.fonts.headings};
 `;
 
 const H1 = styled.h1`  
   // background: ${(props) => props.theme.colors.primary};
   color: rgb(20 184 166);
+  font-family: ${props => props.theme.fonts.headings};
 `;
 
 const components = {

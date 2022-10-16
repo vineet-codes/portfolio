@@ -62,6 +62,12 @@ const PostsContainer = styled.div`
       opacity: 100%;
       color: rgb(20 184 166);
     }
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
 `;
@@ -79,8 +85,7 @@ const Posts = ({posts, all}) => {
             <p>{post.frontmatter.summary}</p>
             <div className="read-more">
               <Link href={`/blog/${post.slug}`}>
-                <a>Read More <FaGreaterThan strokeWidth={"2px"}/> </a>
-                
+                <a><span>Read More &#8594;</span></a>
               </Link>
             </div>
           </div>
