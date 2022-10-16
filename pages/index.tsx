@@ -23,13 +23,6 @@ const HomeContainer = styled.div`
 
 const Home = ({ posts, jobs }) => {
   
-  // const p = posts.map(post => {
-  //   console.log(post.frontmatter.publishedAt);
-  //   post.frontmatter.publishedAt = new Date(post.frontmatter.publishedAt);
-  //   console.log(post.frontmatter.publishedAt);
-    
-  //   return post
-  // })
   return (
     <HomeContainer>
       <Spacer />

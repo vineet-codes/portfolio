@@ -52,7 +52,7 @@ const CodeTag = styled.code`
 `;
 
 const Spacer = styled.div`
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
 `;
 
 export { Container, Main, Title, Description, CodeTag, Spacer };

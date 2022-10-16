@@ -15,6 +15,11 @@ const LC = styled.div`
   margin: 0 auto;
   border: 1px solid #18181b;
 
+  /* this fixes the footerto the bottom if content is not full page */
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
   @media screen and (min-width: 770px) {
     width: 85%;
   }
