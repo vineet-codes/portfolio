@@ -11,7 +11,7 @@ export const jobs = [
     company: 'VeChain Foundation',
     URL: 'https:/www.vechain.org/',
     jobSummary: '',
-    dates: 'June 2022 - present',
+    dates: 'Jun 2022 - present',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const jobs = [
     company: 'Citigroup',
     URL: 'https://icg.citi.com/icghome',
     jobSummary: '',
-    dates: 'Aug 2015 - June 2017',
+    dates: 'Aug 2015 - Jun 2017',
   },
 ];
 

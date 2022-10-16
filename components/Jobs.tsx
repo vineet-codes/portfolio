@@ -4,31 +4,10 @@ import { blob } from "stream/consumers";
 import { FaBriefcase } from "react-icons/fa";
 
 
-// const jobs = [
-//   {
-//     company: "CitiGroup",
-//     logo: "logo",
-//     title: "VP",
-//     date: "2015-2021"
-//   },
-//   {
-//     company: "Pluto Digital",
-//     logo: "logo",
-//     title: "Defi Product Manager",
-//     date: "Nov 2021 - May 2022"
-//   },
-//   {
-//     company: "VeChain Foundation",
-//     logo: "logo",
-//     title: "Senior Product Manager",
-//     date: "Jun 2022 - present"
-//   }
-// ];
-
 const Work = styled.div`
   border: 2px solid rgba(63,63,70,.4);
   border-radius: 1rem;
-  padding: 1.6em;
+  padding: 1.6rem;
 
   font-size: 10px;
 
@@ -56,8 +35,9 @@ const Work = styled.div`
     /* border: 1px solid tomato; */
 
     .job-logo {
+      position: relative;
       grid-column: 1/ span 1;
-      align-self: center;
+      align-self: top;
 
       img {
         border-radius: 50px;
@@ -66,8 +46,8 @@ const Work = styled.div`
 
     .job-pos {
       grid-column: 2/span 3;
-      font-size: 12px;
-      align-self: center;
+      font-size: 14px;
+      align-self: top;
 
       p {
         font-weight: 300;
@@ -85,10 +65,11 @@ const Work = styled.div`
     }
 
     .job-dates {
-      font-size: 10px;
+      font-size: 12px;
       opacity: 40%;
       grid-column: -1 / span 1;
-      align-self: center;
+      align-self: top;
+      margin-left: 3px;
     }
   }
 `;
@@ -103,7 +84,7 @@ const Jobs = ({jobs}) => {
       {jobs.map(job => (
         <div key={job.id} className="job">
           <div className="job-logo">
-            <Image src="/assets/vineet.jpg" width={40} height={40} alt="company logo"/>
+            <Image src="/logos/pluto-digital.png" width={40} height={40} alt="company logo"/>
           </div>
           <div className="job-pos">
             <p className="pos-title">{job.title}</p>

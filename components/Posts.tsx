@@ -72,7 +72,7 @@ const Posts = ({posts}) => {
     <PostsContainer>
         {posts.slice(0,3).map((post) => (
           <div className="post" key={post.slug}>
-            <p className="date">{post.frontmatter.publishedAt.toLocaleDateString()}</p>
+            <p className="date">{post.frontmatter.publishedAt.slice(1,-1)}</p>
             <h3>{post.frontmatter.title}</h3>
             <p>{post.frontmatter.summary}</p>
             <div className="read-more">

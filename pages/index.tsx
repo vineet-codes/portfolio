@@ -22,18 +22,20 @@ const HomeContainer = styled.div`
 `;
 
 const Home = ({ posts, jobs }) => {
-  console.log(jobs);
   
-  const p = posts.map(post => {
-    post.frontmatter.publishedAt = new Date(post.frontmatter.publishedAt);
-    return post
-  })
+  // const p = posts.map(post => {
+  //   console.log(post.frontmatter.publishedAt);
+  //   post.frontmatter.publishedAt = new Date(post.frontmatter.publishedAt);
+  //   console.log(post.frontmatter.publishedAt);
+    
+  //   return post
+  // })
   return (
     <HomeContainer>
       <Spacer />
       <Hero/>
       <div className="home-grid">
-        <Posts posts={p}/>
+        <Posts posts={posts}/>
         <div>
           <Newsletter/>
           <Jobs jobs={jobs}/>
@@ -50,7 +52,8 @@ export async function getStaticProps() {
 
   const temp = rawPosts.map((post) => {
     // post.publishedAt = new Date(post.publishedAt);
-    post.frontmatter.publishedAt = new Date(post.frontmatter.publishedAt);
+    let a = new Date(post.frontmatter.publishedAt);
+    post.frontmatter.publishedAt = a.toDateString();
 
     return post;
   });
@@ -65,7 +68,6 @@ export async function getStaticProps() {
   });
 
   // console.log(allPosts);
-
   // show only non-draft posts in the catalog
   const posts = allPosts.filter((post) => post.frontmatter.draft === false);
 
