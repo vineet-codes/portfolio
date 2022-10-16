@@ -12,7 +12,7 @@ const NavContainer = styled.nav`
         max-width: 250px;
       }
       margin: 0 auto;
-      margin-top: 1rem;
+      margin-top: 2rem;
       text-align: center;
       list-style: none;
       padding-left: 0;

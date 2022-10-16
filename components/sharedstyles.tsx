@@ -51,4 +51,8 @@ const CodeTag = styled.code`
     Bitstream Vera Sans Mono, Courier New, monospace;
 `;
 
-export { Container, Main, Title, Description, CodeTag };
+const Spacer = styled.div`
+  margin-top: 6rem;
+`;
+
+export { Container, Main, Title, Description, CodeTag, Spacer };

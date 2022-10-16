@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Footer from "../Footer";
 import Nav from "../Nav";
 
 const LayoutContainer = styled.div`
@@ -10,7 +11,7 @@ const LayoutContainer = styled.div`
 `;
 
 const LC = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   border: 1px solid #18181b;
 
@@ -25,6 +26,7 @@ const GlobalLayout = ({ children }) => {
       <LC>
         <Nav />
         {children}
+        <Footer/>
       </LC>
     </LayoutContainer>
   );
