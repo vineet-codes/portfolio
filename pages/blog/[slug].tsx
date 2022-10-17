@@ -58,7 +58,7 @@ const Main = styled.main`
     border-bottom: 1px dashed ${(props) => props.theme.colors.primary};
   }
 
-  h1,
+  /* h1,
   h2 {
     font-weight: 700;
   }
@@ -71,7 +71,7 @@ const Main = styled.main`
   h2 a {
     color: ${(props) => props.theme.colors.primary};
     text-decoration: none;
-  }
+  } */
 
   h1 > a :hover {
     text-decoration: underline;
@@ -97,6 +97,8 @@ export default function Blog({ code, frontMatter }) {
   return (
     <>
       <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"/>
+
         <title>{frontMatter.title}</title>
       </Head>
       <Spacer/>

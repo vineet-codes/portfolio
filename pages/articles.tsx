@@ -5,9 +5,27 @@ import { Spacer } from "../components/sharedstyles";
 import { getAllPosts } from "../utils/mdx"
 
 const ArticlesC = styled.div`
+
+  h1 {
+    width: 100%;
+    line-height: 1.3;
+    font-weight: 600;
+  }
   
   h1, p {
     margin: 0.4rem 0;
+  }
+
+  p {
+    opacity: 50%;
+  }
+
+  @media screen and (min-width: 820px) {
+    margin-top: 1.5rem;
+
+    h1 {
+      width: 70%;
+    }
   }
 `;
 
@@ -15,8 +33,8 @@ const Articles = ( { posts }) => {
   return (
     <ArticlesC>
       <Spacer/>
-      <h1>My thoughts on business and technology.</h1>
-      <p> There are {posts.length} articles here.</p>
+      <h1>A collection of thoughts, ideas and speculation about the future of technology and business.</h1>
+      <p> There are {posts.length} articles in theis collection.</p>
       <Posts posts={posts} all = {true}/>
     </ArticlesC>
   );

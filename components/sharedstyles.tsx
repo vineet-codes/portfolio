@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import SyntaxHighlighter from 'react-syntax-highlighter'
 
 const Container = styled.div`
   padding: 0 0.5rem;
@@ -65,21 +66,42 @@ const BlockQuote = styled.blockquote`
 
   color: rgb(20 184 166);
   font-style: italic;
-  border-left: 0.2em solid rgb(20 184 166);
+  border-left: 0.3em solid rgb(20 184 166);
 
 `;
 
 const H2 = styled.h2`  
   // background: ${(props) => props.theme.colors.primary};
-  color: rgb(20 184 166);
-  font-family: ${props => props.theme.fonts.headings};
+   > a {
+    color: rgb(20 184 166);
+    font-family: ${props => props.theme.fonts.headings};
+   }
 `;
 
 const H1 = styled.h1`  
   // background: ${(props) => props.theme.colors.primary};
-  color: rgb(20 184 166);
-  font-family: ${props => props.theme.fonts.headings};
+  > a {
+    /* color: rgb(20 184 166); */
+    font-family: ${props => props.theme.fonts.headings};
+    color: ${props => props.theme.colors.primary};
+    opacity: 85%;
+   }
 `;
+
+const Para = styled.p`
+  font-family: ${props => props.theme.fonts.text};
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 92%;
+`;
+
+// function code({className, ...props}) {
+//   const match = /language-(\w+)/.exec(className || '')
+//   return match
+//     ? <SyntaxHighlighter language={match[1]} PreTag="div" {...props} />
+//     : <code className={className} {...props} />
+// }
+
 
 const components = {
   blockquote: (props) => {
@@ -90,6 +112,9 @@ const components = {
   },
   h2: (props) => {
     return <H2 {...props} />
+  },
+  p: (props) => {
+    return <Para {...props} />
   }
 }
 

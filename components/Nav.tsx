@@ -8,8 +8,8 @@ const NavContainer = styled.nav`
       /* width: 35%; */
       max-width: 250px;
       @media screen and (min-width: 770px) {
-        width: 25%;
-        max-width: 250px;
+        width: 45%;
+        max-width: 300px;
       }
       margin: 0 auto;
       margin-top: 2rem;
@@ -44,6 +44,11 @@ const Nav = () => {
     <NavContainer>
       <div className="navigation">
         <ul>
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
           <li>
             <Link href="/about">
               <a>About</a>

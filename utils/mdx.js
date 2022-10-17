@@ -9,6 +9,7 @@ import TOC from "remark-toc";
 import rSlug from "remark-slug";
 import codeTitle from "remark-code-titles";
 import remarkCapitalize from "remark-capitalize";
+import rehypeHighlight from 'rehype-highlight';
 
 export const ROOT = process.cwd();
 export const POSTS_PATH = path.join(process.cwd(), "content/posts");
@@ -50,7 +51,7 @@ export const getCompiledMDX = async (source) => {
   ];
 
   // [rehypeMetaAttribute, rehypeHighlightCode];
-  const rehypePlugins = [];
+  const rehypePlugins = [rehypeHighlight];
 
   const { code, frontmatter } = await bundleMDX({
     source,

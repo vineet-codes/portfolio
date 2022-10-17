@@ -109,7 +109,7 @@ const Hero = () => {
           I’m Vineet, a product manager and coder based in Dublin, Ireland. I
           specialise in new product development from idea to a scaled product &
           operational team. Past experience in <b>defi</b>{" "}
-          <em>(vaults: yeild aggregation automation)</em>, <b>crypto</b>{" "}
+          <em>(vaults: on chain yeild optimization)</em>, <b>crypto</b>{" "}
           <em>(wallets)</em>, <b>AI</b>{" "}
           <em>(risk profiling and deep learning)</em> and global payments{" "}
           <em>(cross border payments)</em>.
