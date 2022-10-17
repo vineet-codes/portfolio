@@ -86,11 +86,11 @@ const About = () => {
           Hi there, thank you for stopping by, dear internet traverser. This is my personal corner on the internet.
         </p>
         <p>
-          I have been always fascinated by how products are built. The messy non-deterministic path that every idea takes before it becomes a reality. 
+          I have been always fascinated by how products are built. The messy non-deterministic path that every idea takes in process of becoming a reality. 
         </p>
 
         <p>
-          I have had the prvilage of being involved in such situation multiples now. Same prnciples apply weather it be a team of 8, 40 or 50,000 people. This is the place where i journal my learnings and findings.
+          I have had the prvilage of being involved in such situation multiples now. Same prnciples apply weather it be a team of 8, 40 or 500 people. I have learnt a lot. This is the place where i journal my learnings and findings.
         </p>
         <p>
           As we become more digital everyday, i thought it would be a good idea to start documenting my journey for anyone to read and possibly learn something. The motto of this site, <em>"action produces information"</em>.

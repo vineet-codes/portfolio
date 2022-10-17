@@ -30,10 +30,10 @@ const Main = styled.main`
   // width: 65ch; 
   margin: 0 auto;
 
-  a {
+  /* a {
     color: ${(props) => props.theme.colors.primary};
     text-decoration: none;
-  }
+  } */
 
   a:hover {
     text-decoration: underline;

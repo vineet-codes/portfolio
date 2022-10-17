@@ -12,6 +12,7 @@ export const jobs = [
     URL: 'https:/www.vechain.org/',
     jobSummary: '',
     dates: 'Jun 2022 - present',
+    logo: "/logos/v.jpg"
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const jobs = [
     URL: 'https://www.plutodigital.com/',
     jobSummary: '',
     dates: 'Nov 2021 - May 2022',
+    logo: "/logos/p.jpg"
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const jobs = [
     URL: 'https://icg.citi.com/icghome',
     jobSummary: '',
     dates: 'Nov 2019 - Nov 2021',
+    logo: "/logos/citi.jpg"
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ export const jobs = [
     URL: 'https://icg.citi.com/icghome',
     jobSummary: '',
     dates: 'Jun 2017 - Nov-2019',
+    logo: "/logos/citi.jpg"
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ export const jobs = [
     URL: 'https://icg.citi.com/icghome',
     jobSummary: '',
     dates: 'Aug 2015 - Jun 2017',
+    logo: "/logos/citi.jpg"
   },
 ];
 

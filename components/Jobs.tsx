@@ -84,7 +84,7 @@ const Jobs = ({jobs}) => {
       {jobs.map(job => (
         <div key={job.id} className="job">
           <div className="job-logo">
-            <Image src="/logos/pluto-digital.png" width={40} height={40} alt="company logo"/>
+            <Image src={job.logo} width={40} height={40} alt="company logo"/>
           </div>
           <div className="job-pos">
             <p className="pos-title">{job.title}</p>

@@ -31,7 +31,8 @@ const NavContainer = styled.nav`
       li {
         a {
           &:hover {
-            color: green;
+            /* border-bottom: 2px solid rgb(20 184 166); */
+            color: rgb(20 184 166);
           }
         }
       }

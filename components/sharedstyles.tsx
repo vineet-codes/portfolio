@@ -75,6 +75,7 @@ const H2 = styled.h2`
    > a {
     color: rgb(20 184 166);
     font-family: ${props => props.theme.fonts.headings};
+    /* font-size: larger; */
    }
 `;
 
@@ -90,9 +91,11 @@ const H1 = styled.h1`
 
 const Para = styled.p`
   font-family: ${props => props.theme.fonts.text};
-  font-weight: 300;
-  line-height: 1.5;
-  opacity: 92%;
+  font-weight: 400;
+  /* letter-spacing: 0.2rem; */
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 94%;
 `;
 
 // function code({className, ...props}) {
